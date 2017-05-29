@@ -1,0 +1,15 @@
+{
+  "name": "create-large-file",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "David Oddoye <oddoyedavid@gmail.com> (https://www.oddoye.com)",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
