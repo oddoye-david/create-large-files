@@ -1,11 +1,5 @@
 const program = require('commander');
-
-function padWithZero(number) {
-  return number < 10 ? `0${number}` : number;
-}
-function getDateString(date) {
-  return `${date.getFullYear()}-${padWithZero(date.getMonth() + 1)}-${padWithZero(date.getDate())}`;
-}
+const utils = require('./utils');
 
 program
   .version('0.0.1')
@@ -21,7 +15,7 @@ if (!program.unit || !program.size) {
   console.log('Unit must be a number.')
 } else {
   const fs = require('fs');
-  const file = fs.createWriteStream(`./${program.size}${program.unit}.${getDateString(new Date())}.txt`);
+  const file = fs.createWriteStream(`./${program.size}${program.unit}.${utils.getDateString(new Date())}.txt`);
   const oneMB = 2250;
   let fileSize = 0;
 
